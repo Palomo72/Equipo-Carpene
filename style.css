@@ -1,0 +1,173 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif; /* Fuente del cuerpo */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    background-color: #000; /* Fondo negro */
+    color: white; /* Texto blanco */
+}
+
+/* Estilos para el header */
+.header {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+    border-bottom: 5px solid red; /* Línea decorativa roja debajo */
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Tamaño del texto del título */
+    margin: 0; /* Elimina márgenes */
+    text-shadow: 2px 2px 4px #000; /* Sombra al texto */
+}
+/* Animación para el h1 */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    40% {
+        transform: translateY(-20px); /* Rebote hacia arriba */
+    }
+    60% {
+        transform: translateY(-10px); /* Rebote más pequeño */
+    }
+}
+
+.header h1 {
+    font-size: 2.5rem; /* Tamaño del texto del título */
+    margin: 0; /* Elimina márgenes */
+    text-shadow: 2px 2px 4px #000; /* Sombra al texto */
+    animation: bounce 2s infinite; /* Aplica la animación */
+}
+/* Estilo para el enlace de WhatsApp junto al título */
+.whatsapp-link {
+    color: #25D366; /* Color verde de WhatsApp */
+    font-size: 3.5rem; /* Tamaño del ícono */
+    margin-left: 10px; /* Espaciado entre el título y el ícono */
+    padding: 50px;
+    text-decoration: none; /* Elimina el subrayado */
+    vertical-align: middle; /* Alinea el ícono con el texto */
+}
+
+.whatsapp-link:hover {
+    color: #128C7E; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos para la barra de navegación */
+.navbar ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+    margin: 10px 0 0 0; /* Espaciado superior */
+    display: flex; /* Flexbox para alinear los elementos */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 15px; /* Espaciado entre los elementos */
+}
+
+.navbar a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: red; /* Fondo rojo */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.navbar a:hover {
+    background-color: #003366; /* Fondo azul oscuro al pasar el mouse */
+    color: white; /* Texto blanco */
+}
+main {
+    background-color: red;
+}
+
+/* Estilos para la sección #inicio con imagen de fondo */
+#inicio {
+    background-image: url('images/equipo.jpg'); /* Ruta de la imagen */
+    background-size: 90%; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    min-height: 80vh; /* Ocupa el 100% de la altura de la ventana */
+    display: flex; /* Flexbox para organizar contenido */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espaciado entre las secciones y centrado horizontal */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para las demás secciones */
+section:not(#inicio) {
+    background-color:blue; /* Fondo negro con transparencia */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espaciado entre las secciones y centrado horizontal */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para las secciones */
+    width: 90%; /* Ancho de las secciones */
+    max-width: 1200px; /* Ancho máximo */
+    border-radius: 30px;
+}
+
+/* Estilos para los títulos */
+h2 {
+    color:#000; /* Color rojo */
+    text-align: center; /* Centrado */
+    text-shadow: 1px 1px 1px red; /* Sombra al texto */
+}
+
+/* Estilos para las listas */
+ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding */
+}
+
+li {
+    color: white; /* Texto blanco */
+    margin: 5px 0; /* Espaciado entre elementos */
+}
+
+/* Estilo para los strong */
+strong {
+    color: #ffcc00; /* Color amarillo para destacar */
+}
+footer {
+    text-align: center;
+    color: yellow;
+    border-radius: 30px;
+}
+footer .copy {
+    font-size: 12px;
+    /* Aumenta el tamaño del texto si es necesario */
+    height: 50px;
+    background-color: #000;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #FFD700;
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+footer a {
+    color: rgb(100, 235, 237);
+    text-decoration: none;
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+footer a:hover {
+    color: #ffd900;
+    /* Cambia a blanco al pasar el mouse */
+
+}
+
+.copy {
+    font-size: 10px;
+}
