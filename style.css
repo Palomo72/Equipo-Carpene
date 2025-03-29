@@ -29,7 +29,7 @@ body {
 /* Estilo para el enlace de WhatsApp junto al título */
 .whatsapp-link {
     color: #25D366; /* Color verde de WhatsApp */
-    font-size: 1.5rem; /* Tamaño del ícono */
+    font-size: 3.5rem; /* Tamaño del ícono */
     text-decoration: none; /* Elimina el subrayado */
     vertical-align: middle; /* Alinea el ícono con el texto */
 }
