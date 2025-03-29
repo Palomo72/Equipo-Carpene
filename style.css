@@ -3,8 +3,7 @@ body {
     font-family: Arial, sans-serif; /* Fuente del cuerpo */
     margin: 0; /* Elimina márgenes */
     padding: 0; /* Elimina padding */
-    background-color: #000; /* Fondo negro */
-    color: white; /* Texto blanco */
+    background-color:red /* Fondo negro */
 }
 
 /* Estilos para el header */
@@ -67,6 +66,7 @@ body {
 
 /* Estilos para la sección #inicio con imagen de fondo */
 #inicio {
+  
     background-image: url('images/equipo.jpg'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center center; /* Centra la imagen */
@@ -78,7 +78,7 @@ body {
     color: white; /* Texto blanco */
     text-align: center; /* Centra el texto */
     padding: 0; /* Espaciado interno */
-    margin: 0; /* Espaciado entre las secciones y centrado horizontal */
+    margin: 10; /* Espaciado entre las secciones y centrado horizontal */
     width: 100%; /* Ancho completo */
     overflow: hidden;
     border-radius: 10px; /* Bordes redondeados */
@@ -98,7 +98,8 @@ section:not(#inicio) {
 
 /* Estilos para los títulos */
 h2 {
-    color: #000; /* Color negro */
+ 
+    color: black; /* Color negro */
     text-align: center; /* Centrado */
    
 }
@@ -121,9 +122,11 @@ strong {
 
 /* Estilos para el footer */
 footer {
+    background-color: #000;
     text-align: center;
     color: yellow;
-    border-radius: 30px;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 footer .copy {
@@ -136,6 +139,7 @@ footer a {
     color: rgb(100, 235, 237);
     text-decoration: none;
     font-weight: bold; /* Texto en negrita */
+    background-color: #000;
 }
 
 footer a:hover {
