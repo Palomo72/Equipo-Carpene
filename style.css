@@ -20,32 +20,17 @@ body {
     font-size: 2.5rem; /* Tamaño del texto del título */
     margin: 0; /* Elimina márgenes */
     text-shadow: 2px 2px 4px #000; /* Sombra al texto */
-}
-/* Animación para el h1 */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0); /* Posición inicial */
-    }
-    40% {
-        transform: translateY(-20px); /* Rebote hacia arriba */
-    }
-    60% {
-        transform: translateY(-10px); /* Rebote más pequeño */
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el título y el ícono */
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
-.header h1 {
-    font-size: 2.5rem; /* Tamaño del texto del título */
-    margin: 0; /* Elimina márgenes */
-    text-shadow: 2px 2px 4px #000; /* Sombra al texto */
-    animation: bounce 2s infinite; /* Aplica la animación */
-}
 /* Estilo para el enlace de WhatsApp junto al título */
 .whatsapp-link {
     color: #25D366; /* Color verde de WhatsApp */
-    font-size: 3.5rem; /* Tamaño del ícono */
-    margin-left: 10px; /* Espaciado entre el título y el ícono */
-    padding: 50px;
+    font-size: 1.5rem; /* Tamaño del ícono */
     text-decoration: none; /* Elimina el subrayado */
     vertical-align: middle; /* Alinea el ícono con el texto */
 }
@@ -62,6 +47,7 @@ body {
     display: flex; /* Flexbox para alinear los elementos */
     justify-content: center; /* Centra los elementos horizontalmente */
     gap: 15px; /* Espaciado entre los elementos */
+    flex-wrap: wrap; /* Ajusta los elementos en pantallas pequeñas */
 }
 
 .navbar a {
@@ -78,30 +64,29 @@ body {
     background-color: #003366; /* Fondo azul oscuro al pasar el mouse */
     color: white; /* Texto blanco */
 }
-main {
-    background-color: red;
-}
 
 /* Estilos para la sección #inicio con imagen de fondo */
 #inicio {
     background-image: url('images/equipo.jpg'); /* Ruta de la imagen */
-    background-size: 90%; /* Ajusta la imagen para cubrir todo el fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    min-height: 80vh; /* Ocupa el 100% de la altura de la ventana */
+    min-height: 80vh; /* Ocupa el 80% de la altura de la ventana */
     display: flex; /* Flexbox para organizar contenido */
     justify-content: center; /* Centra el contenido verticalmente */
     align-items: center; /* Centra el contenido horizontalmente */
     color: white; /* Texto blanco */
     text-align: center; /* Centra el texto */
-    padding: 20px; /* Espaciado interno */
-    margin: 20px auto; /* Espaciado entre las secciones y centrado horizontal */
+    padding: 0; /* Espaciado interno */
+    margin: 0; /* Espaciado entre las secciones y centrado horizontal */
+    width: 100%; /* Ancho completo */
+    overflow: hidden;
     border-radius: 10px; /* Bordes redondeados */
 }
 
 /* Estilos para las demás secciones */
 section:not(#inicio) {
-    background-color:blue; /* Fondo negro con transparencia */
+    background-color: blue; /* Fondo azul */
     color: white; /* Texto blanco */
     padding: 20px; /* Espaciado interno */
     margin: 20px auto; /* Espaciado entre las secciones y centrado horizontal */
@@ -109,14 +94,13 @@ section:not(#inicio) {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para las secciones */
     width: 90%; /* Ancho de las secciones */
     max-width: 1200px; /* Ancho máximo */
-    border-radius: 30px;
 }
 
 /* Estilos para los títulos */
 h2 {
-    color:#000; /* Color rojo */
+    color: #000; /* Color negro */
     text-align: center; /* Centrado */
-    text-shadow: 1px 1px 1px red; /* Sombra al texto */
+   
 }
 
 /* Estilos para las listas */
@@ -134,40 +118,58 @@ li {
 strong {
     color: #ffcc00; /* Color amarillo para destacar */
 }
+
+/* Estilos para el footer */
 footer {
     text-align: center;
     color: yellow;
     border-radius: 30px;
 }
+
 footer .copy {
     font-size: 12px;
-    /* Aumenta el tamaño del texto si es necesario */
     height: 50px;
     background-color: #000;
-}
-
-footer a:hover {
-    text-decoration: none;
-    color: #FFD700;
-}
-
-footer i {
-    margin-right: 5px;
 }
 
 footer a {
     color: rgb(100, 235, 237);
     text-decoration: none;
-    font-weight: bold;
-    /* Texto en negrita */
+    font-weight: bold; /* Texto en negrita */
 }
 
 footer a:hover {
-    color: #ffd900;
-    /* Cambia a blanco al pasar el mouse */
-
+    color: #ffd900; /* Cambia a amarillo al pasar el mouse */
 }
 
-.copy {
-    font-size: 10px;
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem; /* Reduce el tamaño del título */
+        flex-direction: column; /* Coloca el título y el ícono en columnas */
+    }
+
+    .whatsapp-link {
+        font-size: 1.2rem; /* Reduce el tamaño del ícono */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Coloca los elementos de la barra de navegación en columnas */
+        gap: 10px; /* Reduce el espacio entre los elementos */
+    }
+
+    #inicio {
+        background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+        background-position: center center; /* Centra la imagen horizontal y verticalmente */
+        padding: 0; /* Elimina el padding en pantallas pequeñas */
+        margin: 0; /* Elimina márgenes en pantallas pequeñas */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+    section:not(#inicio) {
+        padding: 15px; /* Reduce el padding en las secciones */
+    }
+
+    footer .copy {
+        font-size: 10px; /* Reduce el tamaño del texto del footer */
+    }
 }
